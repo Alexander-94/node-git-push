@@ -41,7 +41,7 @@ async function cloneRepoUpdateVersionAndPush() {
     }
 
     console.log(jsonVersionNew);
-    fs.writeFile(VERSION_FILE, JSON.stringify(jsonVersionNew), function (err) {
+    fs.writeFile(VERSION_FILE, JSON.stringify(jsonVersionNew, null, 4), function (err) {
         if (err) {
             const msg = 'Error writing version file.';
             console.error(msg);
